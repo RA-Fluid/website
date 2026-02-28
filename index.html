@@ -3,18 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Reza Azadi, Ph.D. | Portfolio</title>
+    <style>
+        /* This is CSS: It makes the raw HTML look nice and modern */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+        }
+        header {
+            background-color: #004b87; /* A clean, academic blue */
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #004b87;
+            font-weight: bold;
+        }
+        section {
+            padding: 2rem 1rem;
+        }
+        h2 {
+            border-bottom: 2px solid #004b87;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #eee;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>Click the button below to see some magic.</p>
-    <button>Click Me!</button>
-    <script src="script.js"></script>
+
+    <header>
+        <h1>Reza Azadi, Ph.D.</h1>
+        <p>Postdoctoral Fellow | Fluid Dynamics & Soft Matter</p>
+    </header>
 
     <nav>
-        <a href="index.html">Home</a> | 
-        <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/ra-fluid" target="_blank">MATLAB Codes</a>
     </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my personal webpage. I completed my Ph.D. in Mechanical Engineering at the University of Alberta, Canada, and I am currently a postdoctoral fellow in Prof. Chiara Neto’s group at the University of Sydney.</p>
+        <p>My research expertise lies in experimental fluid dynamics at both micro and macro scales, utilizing techniques like Particle Image Velocimetry (PIV). I am particularly interested in the rheology of non-Newtonian flows, interfacial flow phenomena, and fabricating textured surfaces.</p>
+    </section>
+
+    <section id="current-work">
+        <h2>Current Projects</h2>
+        <ul>
+            <li><strong>Microplastic Removal:</strong> Investigating the efficiency of microbubbles in capturing and removing microplastics from water systems.</li>
+            <li><strong>Droplet Dynamics:</strong> Developing mathematical models and MATLAB solvers to study the dynamics of air layers on oil droplets rising in water.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Reza Azadi. Connect with me on <a href="https://github.com/ra-fluid">GitHub</a>.</p>
+    </footer>
+
 </body>
 </html>
