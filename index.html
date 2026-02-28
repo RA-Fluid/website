@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reza Azadi, Ph.D. | Portfolio</title>
     <style>
+
+    /* Profile Picture Styling */
+        .profile-pic {
+            float: left; /* Pushes the image to the left so text wraps around it */
+            width: 180px;
+            height: 180px;
+            object-fit: cover; /* Ensures the image isn't squished */
+            border-radius: 50%; /* Makes the image a perfect circle */
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border: 3px solid #004b87; /* Adds a nice blue border */
+        }
+        
+        /* Ensures the section stretches to fit the floating image */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
         /* This is CSS: It makes the raw HTML look nice and modern */
         body {
             font-family: Arial, sans-serif;
@@ -61,8 +81,10 @@
         <a href="https://github.com/ra-fluid" target="_blank">Codes</a>
     </nav>
 
-    <section id="about">
+    <section id="about" class="clearfix">
         <h2>About Me</h2>
+        <img src="images/profile.jpg" alt="Reza Azadi" class="profile-pic">
+        
         <p>Welcome to my personal webpage. I completed my Ph.D. in Mechanical Engineering at the University of Alberta, Canada, and I am currently a postdoctoral fellow in Prof. Chiara Neto’s group at the University of Sydney.</p>
         <p>My research expertise lies in experimental fluid dynamics at both micro and macro scales, utilising techniques like Particle Image Velocimetry (PIV). I am particularly interested in the rheology of non-Newtonian flows, interfacial flow phenomena, and fabricating textured surfaces.</p>
     </section>
