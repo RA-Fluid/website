@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Precise Control of Microdroplet Rise | Reza Azadi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank"
+                                class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>Precise Control of Microdroplet Rise</h1>
+                    </header>
+
+                    <!-- Main Text Narrative -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The incoming carrier-water stream formed a persistent laminar jet that accelerated the droplets and delayed their recovery to steady rise. I therefore evaluated four flow-conditioning concepts, progressing from simple modifications of the injection line to purpose-designed internal diffusers.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The first concept used an internal glass capillary to confine and damp the incoming flow. Although this reduced the jet velocity by approximately 40 to 50%, the remaining momentum was still too high: the predicted recovery distance remained comparable to, or greater than, one metre, far exceeding the practical observation length.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I next extended the injection line into the liquid cell and directed its outlet downwards. Several outlet angles were evaluated, but the droplets frequently reached the bottom of the cell before reversing direction. Their subsequent trajectories were highly variable, preventing reliable axial tracking and terminal-velocity measurement.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The third concept was a circumferential diffuser comprising a cylindrical chamber with distributed radial openings and a central outlet at the top. Parametric studies were used to determine the number and diameter of the circumferential holes and the size of the upper opening. The optimised geometry reduced the carrier-flow momentum to nearly the minimum attainable within the cell.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        However, experimental testing revealed a limitation that was not evident from the single-phase flow analysis. As the droplets exited through the upper opening, their trajectories became disordered, and some contacted and adhered to the surrounding glass surface. Over time, the retained droplets accumulated, coalesced, and obstructed the outlet, making sustained measurements impossible. This result showed that reducing the carrier-flow velocity alone was insufficient. A viable design also had to preserve droplet spacing, maintain an axial trajectory, and provide an unobstructed path into the observation region.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2rem;">
+                        These findings informed the final diverging-diffuser design, which was developed to combine gradual flow deceleration with reliable droplet transmission. The final geometry reduced the influence of the injection jet without introducing recirculation, surface attachment, or outlet blockage, allowing droplets to recover steady rise behaviour within a few millimetres above the diffuser.
+                    </p>
+
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> Engineering Challenge</h3>
+                        <p>
+                            The carrier water delivered the microdroplets into the observation cell as a persistent laminar jet. This background flow accelerated the droplets, promoted coalescence and disturbed their axial trajectories, preventing reliable measurement of steady rise velocity. After evaluating several flow-conditioning concepts, I developed a simulation-informed diverging diffuser that dissipated the inlet momentum while preserving droplet spacing and direction, allowing steady rise behaviour to be recovered within only a few millimetres above the diffuser.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel & Measurement Principles Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 2.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                <p>
+                                    Silicone-oil and n-hexadecane microdroplets are generated under precise pressure control and transported into a quiescent observation cell. High-speed imaging and image analysis quantify each droplet’s diameter, trajectory, deformation and rise velocity after it has recovered from the injection flow. Comparing these measurements across controlled gas-saturation conditions reveals whether interfacial gas enrichment alters the effective boundary condition and produces measurable liquid-liquid slip.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-gears"></i> Key Design Features</h3>
+                                <ul class="tech-list">
+                                    <li>Co-flow generation of 100 to 1,000 µm droplets.</li>
+                                    <li>Interchangeable PEEK receiver capillaries</li>
+                                    <li><Resin-stereolithography-manufactured body.</li>
+                                    <li>Elveflow precision pressure control.</li>
+                                    <li>60 × 60 × 130 mm observation cell.</li>
+                                    <li>SolidWorks and OpenFOAM diffuser development.</li>
+                                    <li>Controlled carrier- and bulk-water gas saturation.</li>
+                                    <li>Time-resolved droplet tracking and velocity measurement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Existing Image Section (Unchanged) -->
+                    <div style="display: flex; gap: 20px; align-items: center; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                        <span class="image" style="margin: 0; display: block;">
+                            <img src="rise_control/rise_control.jpg" alt="Rise Control" style="height: 750px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                        </span>
+                        <span class="image" style="margin: 0; display: block;">
+                            <img src="rise_control/SET_05_SO20cSt_TS_12_7.gif" alt="Second Image" style="height: 750px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                        </span>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Publications</h2>
+
+                    <p style="font-size: 0.9em; margin-bottom: 1.5rem; color: #3d4449;">
+                        <strong>The manuscript is in advanced preparation for submission to Experiments in Fluids.</strong>
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="publications.html" class="button icon solid fa-book">View Related Publications</a>
+                        </li>
+                    </ul>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

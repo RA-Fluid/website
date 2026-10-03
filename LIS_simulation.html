@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Droplet Dynamics | Reza Azadi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank"
+                                class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Title header 1 -->
+                <section>
+                    <header class="main">
+                        <h1>From AFM Topography to Lubricant-Depletion Dynamics</h1>
+                    </header>
+
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        Lubricant-infused surfaces derive their functionality from a liquid retained within a textured solid structure. Under sustained flow, however, the applied shear can redistribute or remove this lubricant, progressively changing the effective interface and reducing surface performance. I developed a geometry-resolved computational workflow to investigate these depletion mechanisms using the actual topography of manufactured surfaces.
+                    </p>
+
+                    <!-- Figures -->
+                    <div
+                        style="display: flex; gap: 25px; align-items: flex-start; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                    
+                        <!-- Left Image & Caption -->
+                        <figure style="display: table; margin: 0; text-align: center; border: none; background: transparent; padding: 0;">
+                            <span class="image" style="margin: 0; display: block;">
+                                <img src="LIS_simulation/LIS-simulation.gif" alt="Hierarchically wrinkled Teflon AF surface"
+                                    style="height: 700px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                            </span>
+                            <figcaption
+                                style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: justify;">
+                                <strong>Temporal depletion of lubricant.</strong> Lubricant depletion from nano-wrinkled LIS surfaces under extreme shear is initially a transient phenomeno, but in long time, it asymptotes to a stable lubricant retension.
+                            </figcaption>
+                        </figure>
+                    
+                        <!-- Right Image & Caption -->
+                        <figure style="display: table; margin: 0; text-align: center; border: none; background: transparent; padding: 0;">
+                            <span class="image" style="margin: 0; display: block;">
+                                <img src="LIS_simulation/AFM.jpg" alt="Experimental Visualization"
+                                    style="height: 700px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                            </span>
+                            <figcaption
+                                style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: justify;">
+                                <strong>AFM topograph of the simulated surface.</strong> Random peaks and valleys in the real nano-wrinkled surfaces makes it a very challenging geometry to simulate numerically.
+                            </figcaption>
+                        </figure>
+                    
+                    </div>
+
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        Atomic force microscopy height maps are processed and converted into three-dimensional computational geometries. Unlike idealised periodic textures, these reconstructions preserve the measured distribution of wrinkles, peaks, valleys and local geometric variations produced during fabrication. The resulting geometries are discretised with local refinement at the solid-liquid and liquid-liquid interfaces, where the largest velocity and stress gradients occur.
+                        
+                        The simulations represent the near-wall region of an externally turbulent flow. Rather than resolving the complete turbulent domain, I apply the equivalent wall shear stress to a smaller two-phase computational domain located within the viscous sublayer. Flow within this local domain is treated as laminar, while the water-lubricant interface is explicitly resolved. This approach concentrates the computational effort on the mechanisms governing lubricant displacement while retaining the physically relevant forcing imposed by the larger flow.
+                    </p>
+
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        The simulations quantify lubricant redistribution, interfacial deformation, local velocity and stress fields, depletion pathways and retained lubricant volume. They reveal how measured surface architecture influences lubricant shielding, exposure to shear, interfacial displacement and the initiation of local depletion.
+                        
+                        The high-resolution calculations were executed in parallel using OpenFOAM on Gadi at the National Computational Infrastructure. Gadi provides national-scale high-performance computing for simulations that require large meshes, parallel processing and substantial data handling beyond conventional desktop resources.
+                    </p>
+
+                    <h2> Geometry-resolved lubricant-flow modelling </h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        AFM height maps were converted into three-dimensional computational geometries that preserve the measured architecture of the manufactured surface. The reconstructed domains were discretised with local refinement near the solid texture and deformable water-lubricant interface.
+                        
+                        The model represents the viscous sublayer beneath an externally turbulent flow. The equivalent turbulent wall shear is imposed on the upper boundary, while the local two-phase motion is solved as laminar flow. This concentrates the calculation on lubricant redistribution and depletion without requiring simulation of the complete turbulent flow field.
+                        
+                        Parallel OpenFOAM calculations on Gadi resolve the evolving interface, retained lubricant volume, local velocity and shear fields, and depletion pathways across the complex surface. The results connect manufacturing-derived topography with lubricant retention, performance and durability.
+                    </p>
+
+                    <h2> Acknowledgement </h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        Simulations were performed using OpenFOAM on Gadi, operated by the National Computational Infrastructure. The national-scale computing capability enabled parallel, geometry-resolved simulations using meshes derived from experimental AFM measurements.
+                    </p>
+
+                    <!-- Divider -->
+                    <hr class="major" />
+
+                    <!-- Publications section -->
+                    <h2>Publications</h2>
+
+                    <p style="font-size: 0.9em; margin-bottom: 1.5rem; color: #3d4449;">
+                        <strong>The manuscript is in advanced preparation for submission to Chemical Engineering Journal.</strong>
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="publications.html" class="button icon solid fa-book">View Related Publications</a>
+                        </li>
+                    </ul>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Confined Slug Bubbles | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- MathJax Configuration for LaTeX Math Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .pub-card {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pub-card h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .one-line-summary {
+            background: #004b87;
+            color: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .result-box {
+            background: #ffffff;
+            border-left: 4px solid #f56a6a;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .result-box h4 {
+            color: #111;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .result-box p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .result-box ul {
+            margin-bottom: 0;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .result-box li {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>Resolving the Hidden Flow Around Confined Slug Bubbles</h1>
+                    </header>
+
+                    <!-- Opening Hook -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        A slug bubble moving through a square channel nearly occupies the entire cross-section. The surrounding liquid must bypass the bubble through thin films adjacent to the flat walls and through larger passages in the four corners. These geometrically distinct pathways produce strongly three-dimensional variations in velocity, pressure, recirculation, and momentum transport.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I combined particle-tracking measurements with adaptive, interface-resolved CFD to reconstruct this hidden flow. The experiments provided direct measurements in the optically accessible central plane, while the validated numerical model resolved the complete thin-film and corner dynamics throughout the channel.
+                    </p>
+
+                    <!-- The Workflow in One Line -->
+                    <div class="one-line-summary">
+                        Track central-plane particles &rarr; Validate 3D CFD model &rarr; Adaptively refine interface &rarr; Resolve thin films & corners &rarr; Reveal hidden backflow & vortices
+                    </div>
+
+                    <h2>Experimental and Computational Approach</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The experiments examined air slug bubbles rising concurrently with a viscous glycerol-water solution through a vertical square channel with a cross-section of $3 \times 3 \text{ mm}^2$. The transparent test section was manufactured using stereolithography with 50 µm resolution and incorporated acrylic windows for high-speed particle-shadow imaging. Particle tracking velocimetry measured the surrounding liquid flow, while custom image processing identified the bubble interface, centroid, dimensions, and rise velocity.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I developed complementary three-dimensional simulations using the interFoam solver in OpenFOAM. The model resolved incompressible, immiscible air-liquid flow using the volume-of-fluid method, with pressure-velocity coupling through the PIMPLE algorithm. The time step was adjusted to maintain a Courant number below 0.25.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        A permanently refined mesh captured the narrow corner passages, while adaptive mesh refinement followed the evolving gas-liquid interface. Interface cells were refined to one-eighth of the local background-cell size and automatically coarsened after leaving the refinement region. This concentrated computational resolution where surface curvature, film thickness, and velocity gradients were greatest without applying the finest mesh throughout the complete domain.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                        Mesh-sensitivity and mass-conservation analyses established the reliability of the simulations. Across the three investigated conditions, the maximum difference between numerical and experimental bubble capillary numbers was approximately 5.1%, while the difference in equivalent bubble diameter remained below approximately 1.1%. The validated model was then used to analyse velocity, pressure, and geometry over approximately 100 cross-sections along each bubble.
+                    </p>
+
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> The Engineering Challenge</h3>
+                        <p>
+                            The most important liquid pathways were also the least accessible experimentally. The wall films were extremely thin, while substantial transport occurred through the four channel corners outside the central imaging plane. I therefore combined high-resolution particle tracking with experimentally validated, adaptively refined three-dimensional CFD to recover the complete film, corner, pressure, and vortex dynamics.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel & By-The-Numbers Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 3.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement & Modelling Principle</h3>
+                                <p>
+                                    Particle tracking measures liquid motion near the bubble in the optically accessible central plane. The measured bubble dimensions, rise velocity, and surrounding velocity field validate a three-dimensional two-phase model. Once validated, the simulation resolves transport through the thin films and corners, including pressure gradients, local backflow, and coherent vortex structures throughout the complete channel.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-server"></i> Key Computational Features</h3>
+                                <ul class="tech-list">
+                                    <li>Three-dimensional, laminar, incompressible two-phase modelling.</li>
+                                    <li>Volume-of-fluid interface capture.</li>
+                                    <li>Dynamic refinement around the gas-liquid interface.</li>
+                                    <li>Permanent mesh refinement in the channel corners.</li>
+                                    <li>Courant number maintained below 0.25.</li>
+                                    <li>Direct validation against bubble dimensions and rise velocity.</li>
+                                    <li>Custom MATLAB analysis of ~100 bubble cross-sections.</li>
+                                    <li>Three-dimensional backflow identification and $Q$-criterion vortex mapping.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <figure style="display: table; margin: 0; text-align: center; border: none; background: transparent; padding: 0;">
+                        <span class="image" style="margin: 0; display: block;">
+                            <img src="meso_scale_bubble_CFD/main.jpg" alt="Hierarchically wrinkled Teflon AF surface"
+                            style="height: 600px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                        </span>
+                        <figcaption
+                            style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: justify;">
+                            <strong>3D structures of the $Q_{\rm cr}$ iso-surfaces.</strong>. For each case, the iso-surfaces are coloured based on the velocity field’s magnitude, normalised by the terminal bubble speed in that flow condition. In each case, the vortex structures’ top and bottom views are shown for more clarity, and only the outline of a quarter of the flow field domain is illustrated.
+                        </figcaption>
+                    </figure>
+
+                    <hr class="major" />
+
+                    <h2>What the Simulations Revealed</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2rem;">
+                        The validated OpenFOAM model provided complete optical access into the otherwise hidden regions of the flow, uncovering complex and highly localized transport mechanisms.
+                    </p>
+
+                    <div class="result-box">
+                        <h4>1. Local Flow Reversal</h4>
+                        <p>Despite the upward motion of both the bulk liquid and the bubble, parts of the liquid films and corner passages moved locally in the opposite direction. This backflow developed where the liquid passage became narrow and momentum transfer through the thin film weakened. The internal bubble circulation then influenced the adjacent liquid strongly enough to drive local reverse motion. The volume of the backflow region decreased as the imposed liquid flow rate and bubble velocity increased.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>2. Distinct Film and Corner Transport</h4>
+                        <p>The thin films and corner passages did not behave as equivalent parallel flow paths. In the bubble-fixed reference frame, the area-averaged corner-flow velocity was approximately 50% greater than the film-flow velocity. Both pathways accelerated near the smallest bubble-wall clearance, but the pressure responses were very different: the thin-film pressure changed abruptly, whereas the corner pressure varied much more gradually over the bubble length.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>3. Sharp Local Pressure Recovery</h4>
+                        <p>At the highest investigated capillary number, the liquid film experienced a local pressure-gradient minimum of approximately $-56 \text{ Pa/mm}$ before recovering at a positive gradient approaching $162 \text{ Pa/mm}$. This recovery occurred over only about one-tenth of the bubble length. These local gradients were far larger than the background pressure gradient in the bulk liquid, demonstrating that average channel pressure loss cannot represent the intense local dynamics surrounding the bubble.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>4. Interconnected Three-Dimensional Vortices</h4>
+                        <p>The $Q$-criterion revealed several physically coherent vortical structures persisting across mesh refinements:</p>
+                        <ul>
+                            <li>A liquid vortex loop ahead of the bubble.</li>
+                            <li>A wake vortex behind the trailing interface.</li>
+                            <li>A dominant vortex tube inside the gas bubble.</li>
+                            <li>Small wall-adjacent vortex filaments downstream of the minimum-film region, likely forming as thin-film liquid leaves the confined gap and rapidly adjusts to the downstream bulk flow.</li>
+                        </ul>
+                    </div>
+                    
+                    <p
+                        style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-top: 1.5rem; padding: 1.5rem; background: #f9fbfd; border-left: 3px solid #0077b6; border-radius: 4px;">
+                        <strong>Validation Note:</strong>
+                        The numerical model successfully reproduced the experimentally measured bubble dynamics across three distinct operating conditions. The maximum capillary-number difference was ~5.1%, while the equivalent bubble diameter differed by no more than ~1.1%. This rigorous validation allowed the simulations to confidently examine the inaccessible corner regions and complete three-dimensional flow topology.
+                    </p>
+
+                    <!-- Full-Width Publication Panel -->
+                    <div class="pub-card">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Journal Publication & Resources</h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 1.05rem; color: #111; text-align: left;">
+                            <strong>R. Azadi</strong> and <strong>D. S. Nobes</strong>, “Local flow dynamics in the motion of slug bubbles in a flowing mini square channel,” <em>International Journal of Heat and Mass Transfer</em>, vol. 178, 121588, 2021.
+                        </p>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #555; text-align: left;">
+                            The publication includes supplementary material showing the evolving interface, mesh generation, and velocity reconstruction during highly deformable bubble motion.
+                        </p>
+                        <ul class="actions" style="margin-bottom: 0;">
+                            <li>
+                            <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2021.121588" target="_blank" rel="noopener"
+                                class="button primary icon solid fa-external-link-alt">Read Publication on International Journal of Heat and Mass Transfer</a></li>
+                            <li><a href="publications.html" class="button icon solid fa-book">View All Publications</a></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

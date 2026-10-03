@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Vertical Gas-Liquid Flow | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .status-badge {
+            background: #eef6fc;
+            border: 1px solid #bce0fd;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            color: #004b87;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-badge i {
+            font-size: 1.4rem;
+            color: #0077b6;
+            flex-shrink: 0;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .one-line-summary {
+            background: #004b87;
+            color: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .pub-card {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pub-card h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .result-box {
+            background: #ffffff;
+            border-left: 4px solid #f56a6a;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .result-box h4 {
+            color: #111;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .result-box p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>How Pipe Diameter Reshapes Vertical Gas-Liquid Flow</h1>
+                    </header>
+
+                    <!-- Published Paper Badge -->
+                    <div class="status-badge">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <strong>Published Research:</strong> M. R. Ansari and R. Azadi, “Effect of diameter and axial location on upward gas-liquid two-phase flow patterns in intermediate-scale vertical tubes,” <em>Annals of Nuclear Energy</em>, 94, 530–540, 2016.
+                        </div>
+                    </div>
+
+                    <!-- Opening Hook -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Gas and liquid flowing together through vertical pipes can organise into bubbly, slug, churn, and annular regimes, each producing different pressure fluctuations, transport behaviour, and operational risks. During my MSc research, I helped design, manufacture, assemble, and commission a multifunctional air-water facility to investigate how these regimes change with pipe diameter and distance from the inlet.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The facility supported co-current and counter-current operation, upward and downward flow, and interchangeable transparent test sections. This study examined co-current upward flow through 3.4 m acrylic tubes with internal diameters of 40 and 70 mm. Air and water were supplied through independently controlled circulation systems, combined in a configurable mixing chamber, and separated downstream for recirculation.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                        Two high-speed cameras recorded the flow simultaneously at axial locations of 1.73 and 3.22 m. Diffuse backlighting improved interface contrast, while image processing was used to isolate the gas structures and classify both the principal flow regimes and finer sub-patterns.
+                    </p>
+
+                    <!-- Short Callout Summary -->
+                    <div class="one-line-summary">
+                        Key Result: Increasing the tube diameter from 40 to 70 mm did not substantially shift the bubbly-to-slug transition, but it sharply contracted the slug-flow region, expanded churn flow, and revealed a distinct semi-annular regime.
+                    </div>
+
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> The Engineering Challenge</h3>
+                        <p>
+                            The apparatus needed to maintain controlled air and water delivery across a broad flow range while allowing simultaneous observation at multiple downstream locations and rapid exchange of pipe diameters. The resulting facility integrated compression, temperature conditioning, constant-head water circulation, bubble removal, configurable phase mixing, optical access, and multi-stage downstream separation.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel & By-The-Numbers Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 3.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                <p>
+                                    Air and water superficial velocities are varied systematically while high-speed cameras record the evolving interface at two axial locations. Image-based classification identifies the dominant flow pattern and maps the transition boundaries among bubbly, slug, churn, semi-annular, and annular regimes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-cogs"></i> Key System Features</h3>
+                                <ul class="tech-list">
+                                    <li><strong>40 and 70 mm</strong> transparent acrylic test sections.</li>
+                                    <li><strong>3.4 m</strong> vertical observation length.</li>
+                                    <li>Configurable air-water mixing chamber with temperature conditioning.</li>
+                                    <li>Constant-head water supply and multi-stage downstream phase separation.</li>
+                                    <li>Simultaneous high-speed imaging at two axial locations with diffuse backlighting.</li>
+                                    <li><strong>> 180 conditions</strong> studied in the 40 mm tube.</li>
+                                    <li><strong>> 300 conditions</strong> studied in the 70 mm tube.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Principal Observations</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2rem;">
+                        The extensive mapping of air and water superficial velocities across different tube diameters and axial locations yielded several critical insights into flow pattern transitions:
+                    </p>
+
+                    <div class="result-box">
+                        <h4>1. Flow Regime Mapping in the 40 mm Tube</h4>
+                        <p>The 40 mm tube exhibited bubbly, slug, churn, and annular flow. Image analysis separated bubbly flow into dispersed, agitated, and agglomerated sub-patterns and divided slug flow into small and large slug structures according to the Taylor-bubble length.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>2. Diameter Expansion and the Semi-Annular Regime</h4>
+                        <p>Increasing the tube diameter to 70 mm substantially reduced the stable slug-flow region and shifted more conditions toward churn flow. The larger tube also exhibited a distinct semi-annular regime, characterised by wall-liquid patches that repeatedly merged, thickened, fell downward, ruptured, and were subsequently carried upward again by the gas stream.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>3. Axial Location Independence</h4>
+                        <p>Changing the observation location from 1.73 to 3.22 m produced little change in the measured transition boundaries for the investigated conditions. Tube diameter was therefore considerably more influential than axial location over the measured range.</p>
+                    </div>
+
+                    <!-- Full-Width Publication Panel -->
+                    <div class="pub-card">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Journal Publication</h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 1.05rem; color: #111; text-align: left;">
+                            <strong>M. R. Ansari</strong> and <strong>R. Azadi</strong>, “Effect of diameter and axial location on upward gas-liquid two-phase flow patterns in intermediate-scale vertical tubes,” <em>Annals of Nuclear Energy</em>, vol. 94, pp. 530–540, 2016.
+                        </p>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #555; text-align: left;">
+                            This study details the comprehensive methodology, experimental setup, and flow maps developed during the intermediate-scale vertical tube investigations.
+                        </p>
+                        <ul class="actions" style="margin-bottom: 0;">
+                            <li>
+                            <a href="https://doi.org/10.1016/j.anucene.2016.04.020" target="_blank" rel="noopener"
+                                class="button primary icon solid fa-external-link-alt">Read Publication on Experiments in Fluids</a></li>
+                            <li><a href="publications.html" class="button icon solid fa-book">View All Publications</a></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

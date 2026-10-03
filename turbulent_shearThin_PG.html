@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Shear-Thinning Polymer Flow | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- MathJax Configuration for LaTeX Math Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .status-badge {
+            background: #eef6fc;
+            border: 1px solid #bce0fd;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            color: #004b87;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-badge i {
+            font-size: 1.4rem;
+            color: #0077b6;
+            flex-shrink: 0;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .one-line-summary {
+            background: #004b87;
+            color: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .pub-card {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pub-card h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .result-box {
+            background: #ffffff;
+            border-left: 4px solid #f56a6a;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-box h4 {
+            color: #111;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>When Polymers and Acceleration Reshape Turbulence</h1>
+                    </header>
+
+                    <!-- Published Paper Badge -->
+                    <div class="status-badge">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <strong>Published Research:</strong> R. Azadi and D. S. Nobes, “Near-wall turbulence of semidilute polymer solution flows subjected to varying favorable pressure gradient,” <em>Physical Review Fluids</em>, 11, 034611, 2026.
+                        </div>
+                    </div>
+
+                    <!-- Opening Hook -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Adding a minute concentration of flexible polymer molecules to water can substantially reduce turbulent drag. Accelerating a turbulent flow can also suppress fluctuations and drive the boundary layer toward relaminarisation. This project asked a fundamental question: <strong>what happens when these two effects act simultaneously inside a spatially varying engineering flow?</strong>
+                    </p>
+
+                    <!-- The Research Story in One Line -->
+                    <div class="one-line-summary">
+                        Manufacture the geometry &rarr; Characterise the polymers &rarr; Resolve the near-wall flow &rarr; Quantify turbulence redistribution &rarr; Identify opportunities for drag-optimised design
+                    </div>
+
+                    <h2>From Industrial Flow Control to Fundamental Turbulence Physics</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The work grew from an engineering problem associated with inflow-control devices used in steam-assisted gravity drainage. Constrictions and nozzles can regulate unwanted phases in these systems, but the resulting pressure losses may induce cavitation, choke the flow, and reduce efficiency. My earlier work showed that drag-reducing polymers can suppress hydrodynamic cavitation. This study examined the underlying near-wall turbulence physics when polymeric flows accelerate through nonuniform geometries.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I designed and built a recirculating flow facility containing a detachable converging-diverging surface. The manufactured geometry imposed successive regions of acceleration, curvature, and pressure-gradient variation, while a flat upstream section provided a fully developed reference flow. This allowed polymer effects under a conventional constant pressure gradient to be separated from their behaviour under strong spatial acceleration.
+                    </p>
+                    
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> The Engineering Challenge</h3>
+                        <p>
+                            The apparatus had to create a controlled but spatially varying pressure gradient while maintaining optical access and resolving velocity gradients within tens of micrometres of the wall. Capturing this required micron-scale spatial resolution, accurate identification of a curved wall, massive statistical sampling of turbulent fluctuations, and a rigorous rheological framework that accounted for the polymers’ shear-dependent viscosity and elastic response.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel & By-The-Numbers Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 2.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                <p>
+                                    A converging-diverging surface accelerates the flow and generates a spatially varying favourable pressure gradient. Microscopic PIV measures velocity fields along the opposite flat wall, allowing acceleration effects to be examined without optical distortion. Mean velocity, boundary-layer thickness, wall shear, and Reynolds stresses are extracted and compared among water and polymer solutions to determine how viscoelasticity changes near-wall momentum transport.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-chart-line"></i> The Study at a Glance</h3>
+                                <ul class="tech-list">
+                                    <li><strong>200 and 400 ppm</strong> polyacrylamide solutions.</li>
+                                    <li><strong>11,000 PIV image pairs</strong> per experimental condition.</li>
+                                    <li><strong>40–60 μs</strong> pulse separation for frame straddling.</li>
+                                    <li><strong>~47 μm</strong> wall-normal vector spacing.</li>
+                                    <li><strong>< 0.2%</strong> mean-velocity measurement error.</li>
+                                    <li><strong>Up to 38.8% drag reduction</strong> under constant pressure gradient.</li>
+                                    <li><strong>Up to 89% attenuation</strong> of dimensional Reynolds shear stress.</li>
+                                    <li><strong>Up to 87% enhancement</strong> of peak streamwise fluctuations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Key Design Features & Extended Technique</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Polymer-seeded and Newtonian flows were imaged at the channel midspan using frame-straddled PIV. The images were processed using background subtraction, local intensity normalisation, and multipass cross-correlation with interrogation windows adapted to the strongly directional near-wall flow. The system integrated several critical design components:
+                    </p>
+                    
+                    <ul style="font-size: 1.05rem; line-height: 1.7; color: #111; text-align: justify; margin-bottom: 2.5rem;">
+                        <li><strong>Replaceable pressure-gradient surface:</strong> A detachable converging-diverging profile (60° converging, 2 mm restriction, 12° expansion) creates spatially varying acceleration.</li>
+                        <li><strong>SLA-manufactured flow path:</strong> The contraction, honeycomb, test section, diffuser, and bump were resin printed for controlled hydraulic and optical performance.</li>
+                        <li><strong>Wide optical test section:</strong> A 60 mm channel width provides a minimum aspect ratio of 7.5, supporting a predominantly two-dimensional centre-plane flow.</li>
+                        <li><strong>Microscopic PIV & Illumination:</strong> Magnification of ~3.4 resolves near-wall velocity gradients, while 1.5 μs LED pulses freeze tracer motion within the rapidly accelerating flow.</li>
+                        <li><strong>Subpixel calibration:</strong> Third-order polynomial mapping produced an RMS calibration error below 0.15 pixels.</li>
+                        <li><strong>Rheological characterisation:</strong> Steady-shear and oscillatory measurements quantify shear-thinning and relaxation, fit to the Carreau-Yasuda constitutive model to estimate local wall-shear viscosity.</li>
+                    </ul>
+
+                    <hr class="major" />
+
+                    <h2>What the Experiments Revealed</h2>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2rem;">
+                        The combination of modular manufacturing, rheological characterisation, and high-resolution velocimetry produced the first spatially resolved experimental dataset of polymer-induced turbulence modification under nonuniform acceleration. The data yielded four primary insights:
+                    </p>
+
+                    <div class="result-box">
+                        <h4>1. Polymers redistributed turbulence rather than merely reducing it</h4>
+                        <p style="margin-bottom: 0; text-align: justify;">In the fully developed reference flow, polymer addition substantially suppressed the transport of momentum toward and away from the wall. At the highest flow rate, peak Reynolds shear stress was reduced by ~78%. Simultaneously, peak dimensional streamwise fluctuations <em>increased</em> by up to 87% for the 400 ppm solution. The polymer did not uniformly suppress every component of turbulence; it weakened wall-normal transport while concentrating fluctuation energy in the streamwise direction.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>2. Acceleration amplified turbulence suppression</h4>
+                        <p style="margin-bottom: 0; text-align: justify;">The spatially varying favourable pressure gradient independently stabilised the flow, but its combination with polymer viscoelasticity produced much stronger attenuation. In the accelerating region, dimensional Reynolds shear stress was reduced by ~89% relative to water. The polymeric mean-velocity profiles departed strongly from the classical logarithmic law, with the strongest combined cases rising above Virk’s ultimate profile.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>3. Geometry still mattered locally</h4>
+                        <p style="margin-bottom: 0; text-align: justify;">The flow did not respond only to the overall pressure gradient. Concave curvature could locally destabilise the boundary layer, while the straight accelerating section allowed the favourable pressure gradient and polymer extension to produce particularly strong suppression. Convex curvature further stabilised parts of the flow, heavily dependent on local wall stress.</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>4. Drag reduction depended on the operating condition</h4>
+                        <p style="margin-bottom: 0; text-align: justify;">While 400 ppm solutions achieved maximum measured drag reductions of ~38.8%, lower tested conditions (e.g., 200 ppm at low flow) actually produced a small drag <em>increase</em>. This reinforces a critical engineering principle: polymer concentration, local shear, flow history, and geometry must be designed together.</p>
+                    </div>
+
+                    <!-- Figure Storytelling (8 Selected Figures in Four 2-Column Rows) -->
+                    <h2 style="margin-top: 3rem;">Experimental Setup & Turbulence Dynamics</h2>
+
+                    <!-- Figure Row 1 -->
+                    <div class="row gtr-150" style="margin-bottom: 3rem;">
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 90px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Experimental Facility</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.6; color: #111; margin-bottom: 0;">
+                                    Modular recirculating system combining flow conditioning, optical access, and high-resolution near-wall PIV.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="turbulence_polymer_FPG/flow_system.jpg" alt="Experimental facility overview" style="height: 500px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 90px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Replaceable Surface Geometry</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.6; color: #111; margin-bottom: 0;">
+                                    Detachable SLA converging-diverging surface generating successive concave, inclined, and convex regions.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="turbulence_polymer_FPG/nozzle.jpg" alt="Replaceable surface geometry" style="height: 500px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Figure Row 3 -->
+                    <div class="row gtr-150" style="margin-bottom: 3rem;">
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 90px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Mean Velocity Profiles</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.6; color: #111; margin-bottom: 0;">
+                                    Departure from the law of the wall, with strong acceleration cases approaching Virk’s ultimate profile.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="turbulence_polymer_FPG/mean_flow_shift.jpg" alt="Mean velocity profiles" style="height: 650px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 90px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Reynolds Shear Stress</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.6; color: #111; margin-bottom: 0;">
+                                    Combined viscoelasticity and favourable pressure gradients suppress wall-normal momentum transfer by up to 89%.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="turbulence_polymer_FPG/Reynolds_shear_stress.jpg" alt="Reynolds shear stress attenuation" style="height: 650px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Left-Aligned "Why the Result Matters" Section -->
+                    <h2 style="text-align: left !important; margin-left: 0;">Why the Result Matters</h2>
+                    <p style="text-align: left; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                        Many industrial flow-control elements contain bends, constrictions, expansions, and curved surfaces. Polymer drag reduction in these systems cannot be predicted reliably from canonical straight-pipe measurements alone because the boundary layer retains a spatial history of acceleration and curvature. This work provides benchmark data for conditions closer to practical components and shows why local geometry must be included when modelling or designing polymer-modified flows. The results support the development of curved flow-control devices that actively exploit acceleration while avoiding cavitation, excessive pressure loss, or unstable operation.
+                    </p>
+
+                    <!-- Full-Width Publication Panel -->
+                    <div class="pub-card">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Journal Publication & Open Data</h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 1.05rem; color: #111; text-align: left;">
+                            <strong>R. Azadi</strong> and <strong>D. S. Nobes</strong>, “Near-wall turbulence of semidilute polymer solution flows subjected to varying favorable pressure gradient,” <em>Physical Review Fluids</em>, vol. 11, p. 034611, 2026.
+                        </p>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #555; text-align: left;">
+                            Supported by the Natural Sciences and Engineering Research Council of Canada. Velocity measurements and supporting experimental data are openly archived.
+                        </p>
+                        <ul class="actions" style="margin-bottom: 0;">
+                            <li><a href="#" class="button primary icon solid fa-external-link-alt">Read Paper on PRF</a></li>
+                            <li><a href="https://zenodo.org" target="_blank" rel="noopener" class="button icon solid fa-database">Access Dataset on Zenodo</a></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

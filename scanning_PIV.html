@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Precision Scanning PIV for Confined Flows | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .status-badge {
+            background: #eef6fc;
+            border: 1px solid #bce0fd;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            color: #004b87;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-badge i {
+            font-size: 1.4rem;
+            color: #0077b6;
+            flex-shrink: 0;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .ack-box {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ack-box h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .ack-box p {
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>Precision Scanning PIV for Confined Three-Dimensional Flows</h1>
+                    </header>
+
+                    <!-- Project Outcome Badge -->
+                    <div class="status-badge">
+                        <i class="fa-solid fa-sliders"></i>
+                        <div>
+                            <strong>Project Outcome:</strong> Established a precision scanning-PIV capability for spatially registered measurements in confined flows. The platform was developed and integrated as a foundation for future multi-plane Taylor–Couette experiments.
+                        </div>
+                    </div>
+
+                    <!-- Main Scientific Overview Narrative -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Planar particle image velocimetry (PIV) measures two velocity components within a single illuminated plane. This provides detailed information about local flow structure but cannot, by itself, reveal how the velocity field changes across neighbouring planes. I developed an automated scanning PIV platform to acquire measurements at precisely controlled spatial positions while preserving the optical alignment among the laser sheet, camera, and test section.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The optical and imaging components are mounted as a coordinated assembly on a motorised translation system driven by a Thorlabs LNR502-series linear stage. Rather than adjusting the camera and illumination independently for each measurement location, the complete assembly moves together. This maintains the relative position of the camera, imaging plane, laser-sheet focus, and field of view throughout the scan.
+                    </p>
+
+                    <!-- Single Full-Width CAD Image Container -->
+                    <div style="margin-top: 2rem; margin-bottom: 2.5rem;">
+                        <figure style="display: table; margin: 0 auto; text-align: center; border: none; background: transparent; padding: 0; width: 100%;">
+                            <span class="image" style="margin: 0; display: block;">
+                                <img src="images/scanning_PIV.jpg" alt="Automated Scanning-PIV Platform CAD Assembly" style="max-height: 500px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0 auto;" />
+                            </span>
+                            <figcaption style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: justify;">
+                                <strong>Automated scanning-PIV platform.</strong> The camera, laser-sheet optics, and translation hardware form a coordinated assembly positioned beside the rheometer-driven Taylor–Couette system. The complete platform is mounted on an optical table for vibration isolation.
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> Engineering Challenge</h3>
+                        <p>
+                            Scanning a flow field requires more than translating a laser sheet. If the illumination and camera are repositioned independently, small alignment errors change the measurement plane, focus, magnification, and calibration between scans. I designed the camera and laser-sheet optics as a coordinated translating assembly so their relative alignment remains fixed while the measurement plane is moved through the flow.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 2.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                <p>
+                                    Tracer particles within the working fluid are illuminated by a laser sheet approximately 0.5 mm thick. A double-frame camera records particle displacements within the illuminated plane, from which two in-plane velocity components can be calculated. The motorised stage then moves the complete optical assembly by a prescribed increment, enabling the process to be repeated across a sequence of spatially registered planes.
+                                </p>
+                                <p style="margin-top: 0.8rem;">
+                                    A high-quality 45° mirror beneath the test section redirects images of the radial-azimuthal plane to the camera. Sequential measurements at controlled axial positions map how the in-plane velocity field varies along the height of the confined Taylor–Couette cell.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-gears"></i> Key Design Features</h3>
+                                <ul class="tech-list">
+                                    <li><strong>Coordinated optical translation:</strong> Camera, laser-sheet optics, and mounting structure move together to preserve alignment across scan positions.</li>
+                                    <li><strong>Precision motorised positioning:</strong> Thorlabs LNR502-series linear stage provides repeatable, position-controlled travel.</li>
+                                    <li><strong>Scanning-plane registration:</strong> Prescribed stage increments associate velocity fields with known spatial locations.</li>
+                                    <li><strong>Thin laser-sheet generation:</strong> Bi-concave, bi-convex, and cylindrical lenses shape the beam into an ~0.5 mm measurement sheet.</li>
+                                    <li><strong>Under-cell imaging arrangement:</strong> 45° front-surface mirror redirects the radial-azimuthal plane to a horizontal camera.</li>
+                                    <li><strong>Wavelength-selective imaging:</strong> Green bandpass optical filter suppresses ambient light and stray reflections.</li>
+                                    <li><strong>Laser safety & containment:</strong> Enclosed with laser-rated black fabric and an anodised beam-trap termination plate.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Optical Design & System Architecture</h2>
+
+                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.3rem;">Generating a Thin and Spatially Stable Laser Sheet</h3>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The raw laser beam must be expanded in one direction while remaining tightly focused in the orthogonal direction. I designed the optical train using spherical and cylindrical lenses to control the beam independently along the two axes. Bi-concave and bi-convex elements condition the incoming beam, while cylindrical lenses transform it into a sheet. Adjusting focal lengths and separation distances reduced the sheet thickness to approximately 0.5 mm at the measurement region, improving plane definition, reducing out-of-plane particle illumination, and minimizing depth-averaging errors.
+                    </p>
+
+                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.3rem;">Coordinated Scanning & Under-Cell Optical Path</h3>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Mounting the camera and illumination train on the same motorized translation framework preserves camera-to-sheet alignment, focal-plane position, magnification, viewing angle, and optical working distance throughout the scan.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Direct placement of the camera beneath the Taylor–Couette cell was constrained by the rheometer and fluid enclosure. I incorporated a high-quality 45° mirror beneath the test section to redirect the vertical viewing path by 90°, allowing the camera to remain horizontally mounted while imaging the radial-azimuthal plane above it without interfering with the rotating drive.
+                    </p>
+
+                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.3rem;">Optical Filtering & Laser Containment</h3>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                        A green bandpass optical filter mounted on the camera transmits the tracer scattering while rejecting ambient laboratory lighting. For safety and optical contrast, the measurement region is enclosed in laser-rated black fabric on a rigid aluminum frame, while a dark anodised metal plate intercepts the transmitted beam.
+                    </p>
+
+                    <!-- Institutional Acknowledgements -->
+                    <div class="ack-box">
+                        <h3><i class="fa-solid fa-building-columns"></i> Project Context & Acknowledgements</h3>
+                        <p>
+                            <strong>Role & Location:</strong> Postdoctoral Research Associate, Department of Mechanical Engineering, University of Alberta, Edmonton, Canada.<br>
+                            <strong>My Contribution:</strong> Mechanical and optical design, laser sheet optics formulation, scanning stage automation, optical alignment protocols, and laser safety containment integration. The mechanical, optical, scanning, and laser-safety architecture was fully integrated as an experimental capability for multi-plane flow studies.
+                        </p>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Related Engineering Projects & Hardware</h2>
+
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: #3d4449;">
+                        <strong>Explore related optical flow measurement platforms, SolidWorks CAD repositories, and experimental hardware designs.</strong>
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="publications.html" class="button icon solid fa-book">View Publications</a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="button icon brands fa-github">View GitHub Repositories</a></li>
+                    </ul>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Droplet Dynamics | Reza Azadi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank"
+                                class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>Droplet Dynamics & Interfacial Gas Layers</h1>
+                    </header>
+
+                    <span class="image main"><img src="droplet_dynamics/micro_bubble_generation_zoomedIn.gif"
+                            alt="Droplet Dynamics Visualisation" /></span>
+
+                    <!-- Main Text -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        I developed an experimental and computational platform to investigate whether dissolved air
+                        accumulates at rising oil-water interfaces and produces measurable interfacial slip. The system
+                        generates silicone-oil and n-hexadecane microdroplets approximately 100 to 1,000 µm in diameter
+                        and measures their motion under controlled gas-saturation conditions.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        The co-flow generator combines a stereolithography-manufactured body with interchangeable PEEK
+                        receiver capillaries, replacing fragile fixed glass nozzles and allowing the droplet-size range
+                        to be changed efficiently. An optically transparent capillary section provides visual access to
+                        droplet formation, while an Elveflow pressure controller independently regulates the carrier and
+                        dispersed phases.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        Transporting the droplets into a 60 × 60 × 130 mm observation cell created a major measurement
+                        challenge. The carrier water entered as a laminar two-phase jet that accelerated the droplets,
+                        promoted coalescence, and disturbed their trajectories. Following iterative design and
+                        parametric studies in SolidWorks and OpenFOAM, I developed an internal diffuser that decelerates
+                        and redistributes the inlet flow. The final design allowed the droplets to recover steady rise
+                        behaviour within only a few millimetres above the diffuser, enabling reliable terminal-velocity
+                        measurements.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111;">
+                        I complemented the experiments with a convective Epstein-Plesset model for interfacial gas
+                        accumulation and a three-phase hydrodynamic model based on a linearised
+                        Bhatnagar-Gross-Krook formulation. These models connect dissolved-gas transport with gas-layer
+                        thickness, interfacial mobility, apparent slip, and the measured droplet dynamics. The principal
+                        study is under review, with a companion experimental-methods paper in advanced preparation.
+                    </p>
+
+                    <span class="image main"><img src="droplet_dynamics/flow_cell.jpg"
+                            alt="Droplet Dynamics Visualisation" /></span>
+
+                    <hr class="major" />
+
+                    <!-- Two-Column Grid Restored -->
+                    <div class="row gtr-150">
+
+                        <!-- Item 1 -->
+                        <div class="col-6 col-12-medium">
+                            <div style="display: flex; gap: 15px; align-items: flex-start; margin-bottom: 2rem;">
+                                <!-- Image Wrapper -->
+                                <div style="flex: 0 0 45%;">
+                                    <span class="image" style="display: block; margin-bottom: 0;">
+                                        <img src="droplet_dynamics/Raydrop_generator.jpg" alt="Generator Concept"
+                                            style="border-radius: 4px; height: 300px; width: 100%; object-fit: contain; display: block;" />
+                                    </span>
+                                </div>
+                                <!-- Text Wrapper -->
+                                <div style="flex: 1;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;">Generator
+                                        Concept</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111; margin-bottom: 0;">
+                                        3D view of the designed micro-droplet generator system. The dispersed phase
+                                        eneters the chamber througha 65 μm PEEK tubing. The continous flow enters the
+                                        chamber through a 1 mm opening. Spacing between the end of the injector line is
+                                        carefully tuned to be almost half of its opening size, 33 μm to, to improve
+                                        shearing off the droplets by the continuous flow. The resulting two-phase flow
+                                        carriers the generated droplets out of the system. Depending on the droplet size
+                                        range, the carrier tubing size can change from 150 μm for fine microdroplets to
+                                        800 μm for larger droplets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="col-6 col-12-medium">
+                            <div style="display: flex; gap: 15px; align-items: flex-start; margin-bottom: 2rem;">
+                                <div style="flex: 0 0 45%;">
+                                    <span class="image" style="display: block; margin-bottom: 0;">
+                                        <img src="droplet_dynamics/microdroplet_acceleration.gif"
+                                            alt="Original Injection Problem"
+                                            style="border-radius: 4px; height: 300px; width: 100%; object-fit: contain; display: block;" />
+                                    </span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;">Microdroplets
+                                        Acceleration Problem</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111; margin-bottom: 0;">
+                                        High-speed video on the left shows generated 20 cSt PDMS droplets entering the
+                                        liquid-cell being carried by a water flow jet. The droplets decelerate as they
+                                        rise, but as seen in the CFD simulaiton, projected on the mid-plane of the cell,
+                                        water enters as a jet into the cell from the narrow 800 μm opening and act as a
+                                        laminar jet for which a few metres is required to decya by 90%.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 (Spans the full page width) -->
+                        <div class="col-12">
+                            <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 2rem;">
+
+                                <!-- Image Wrapper (Takes up 35% of the FULL screen width) -->
+                                <div style="flex: 0 0 20%;">
+                                    <span class="image" style="display: block; margin-bottom: 0;">
+                                        <img src="droplet_dynamics/one_sample_design.gif" alt="Diffuser Development"
+                                            style="border-radius: 4px; height: 320px; width: 100%; object-fit: contain; display: block;" />
+                                    </span>
+                                </div>
+
+                                <!-- Text Wrapper (Takes up the remaining 65%) -->
+                                <div style="flex: 1;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;">From Flow
+                                        Suppression to Reliable Droplet Delivery</h3>
+
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111; margin-bottom: 1rem;">
+                                        I evaluated four approaches to suppress the carrier-water jet while preserving
+                                        reliable droplet transport. An internal glass capillary reduced the jet velocity
+                                        by approximately 40 to 50%, but the remaining momentum still required an
+                                        impractically long recovery distance. Redirecting an extended injection line
+                                        downwards also proved unsuitable because droplets frequently reached the cell
+                                        floor and returned along unpredictable trajectories.
+                                    </p>
+
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111; margin-bottom: 1rem;">
+                                        A circumferential diffuser performed much better hydrodynamically. Parametric
+                                        studies identified a combination of radial-hole number, hole diameter, and
+                                        upper-outlet size that reduced the incoming-flow momentum to nearly the minimum
+                                        attainable within the cell. However, experiments revealed a critical three-phase
+                                        limitation: droplets became disordered near the outlet, adhered to the upper
+                                        glass surface, accumulated, coalesced, and eventually obstructed the opening.
+                                    </p>
+
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.5; color: #111; margin-bottom: 1rem;">
+                                        This iterative process established that successful flow conditioning required
+                                        more than jet deceleration. The device also needed to preserve droplet spacing
+                                        and axial alignment while preventing recirculation, surface contact, and
+                                        blockage. These requirements guided the development of the final diverging
+                                        diffuser, which enabled droplets to recover steady rise behaviour within only a
+                                        few millimetres of entering the observation region.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Open Source Code & Publications</h2>
+
+                    <p style="font-size: 0.9em; margin-bottom: 1.5rem; color: #3d4449;">
+                        <strong>Selected general-purpose modelling utilities and demonstration cases are available on
+                            GitHub. The validated research implementation and supporting data will be released following
+                            publication, subject to co-author and institutional requirements.</strong>
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="https://github.com/ra-fluid" target="_blank"
+                                class="button primary icon brands fa-github">View Codes on GitHub</a></li>
+                        <li><a href="publications.html" class="button icon solid fa-book">View Related Publications</a>
+                        </li>
+                    </ul>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

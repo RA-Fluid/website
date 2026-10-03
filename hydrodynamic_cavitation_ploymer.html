@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Hydrodynamic Cavitation in Polymer Solutions | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- MathJax Configuration for LaTeX Math Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .status-badge {
+            background: #eef6fc;
+            border: 1px solid #bce0fd;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            color: #004b87;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-badge i {
+            font-size: 1.4rem;
+            color: #0077b6;
+            flex-shrink: 0;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .one-line-summary {
+            background: #004b87;
+            color: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 0.3px;
+        }
+
+        .pub-card {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pub-card h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank"
+                                class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>How Flexible Polymers Tame Violent Cavitation</h1>
+                    </header>
+
+                    <!-- Published Paper Badge -->
+                    <div class="status-badge">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <strong>Published Research:</strong> R. Azadi and D. S. Nobes, “Hydrodynamic cavitation
+                            reduction in semidilute turbulent polymer solution flows,” <em>Journal of Fluid
+                                Mechanics</em>, 952, A29, 2022. [<a href="https://doi.org/10.1017/jfm.2022.910"
+                                target="_blank" rel="noopener">Open Access Article</a>]
+                        </div>
+                    </div>
+
+                    <!-- Opening Hook & Narrative -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Cavitation begins when local static pressure falls below the liquid’s vapour pressure,
+                        triggering the rapid growth of microscopic vapour bubbles. Their subsequent violent collapse can
+                        generate destructive shock waves, high-speed liquid microjets, acoustic noise, severe vibration,
+                        and material erosion. In this project, I investigated whether adding minute concentrations of
+                        flexible polymer molecules could alter this violent process—not simply by increasing bulk
+                        viscosity, but by fundamentally modifying how vapour structures grow, collapse, and shed through
+                        a turbulent flow.
+                    </p>
+
+                    <!-- The Experiment in One Line -->
+                    <div class="one-line-summary">
+                        Design the flow &rarr; Manufacture the nozzle &rarr; Trigger cavitation &rarr; Image every
+                        collapse &rarr; Measure pressure signatures &rarr; Reveal polymer dynamics
+                    </div>
+
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I designed and commissioned a recirculating mesoscale flow facility centered on a modular
+                        converging-diverging nozzle with a 2 mm throat. The system combined interchangeable
+                        stereolithography-manufactured components, optically accessible windows, online flow and
+                        temperature monitoring, differential and high-frequency pressure sensing, and synchronized
+                        high-speed backlit imaging. A parametrically optimized contraction and honeycomb conditioned the
+                        incoming stream before entering the nozzle test section.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The modular nozzle geometry was formulated using SolidWorks Flow Simulation, evaluating
+                        convergence angles from 24° to 60°, divergence angles from 6° to 24°, throat heights from 1 to 3
+                        mm, and flow rates from 2 to 14 L/min. The selected geometry combined a 60° converging section,
+                        12° diffuser, and 2 mm throat, balancing cavitation regimes against pump performance and optical
+                        constraints. The final 3.5-million-cell numerical model predicted throat-wall shear stresses
+                        approaching 1,000 Pa under peak operating conditions.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The nozzle, test section, contraction, diffuser, and flow-straightening honeycomb were
+                        fabricated using low-force stereolithography (SLA) at 50 µm resolution, followed by optical
+                        polishing to ensure smooth hydraulic surfaces. Synchronized backlit imaging recorded 17,000
+                        images at 19 kHz for each flow condition, using an ultra-short 237 ns illumination pulse to
+                        freeze high-velocity cavity motion. Simultaneously, dynamic pressure fluctuations were acquired
+                        downstream at 125 kHz to connect visual cavity evolution with shedding frequencies and pressure
+                        signatures.
+                    </p>
+
+                    <div
+                        style="display: flex; gap: 25px; align-items: flex-start; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;">
+
+                        <!-- Left Image & Caption -->
+                        <figure
+                            style="display: table; margin: 0; text-align: center; border: none; background: transparent; padding: 0;">
+                            <span class="image" style="margin: 0; display: block;">
+                                <img src="cavitation/main.jpg" alt="Hierarchically wrinkled Teflon AF surface"
+                                    style="height: 700px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block;" />
+                            </span>
+                            <figcaption
+                                style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: justify;">
+                                <strong>Backlit illuminated optical set-up to visualize the flow.</strong>The
+                                high-current LED was equipped with biconvex lenses to focus the light beams and a
+                                diffuser to distribute them uniformly in the region of interest.
+                            </figcaption>
+                        </figure>
+
+                        <!-- Engineering Challenge Callout Box -->
+                        <div class="engineering-callout">
+                            <h3><i class="fa-solid fa-triangle-exclamation"></i> Engineering Challenge</h3>
+                            <p>
+                                Cavitation evolves over microseconds, spans multiple spatial length scales, and couples
+                                vapour formation with turbulent flow, acoustic pressure waves, and polymer rheology.
+                                Capturing this behavior required synchronized high-speed imaging and dynamic pressure
+                                acquisition, precise optical calibration inside a confined transparent nozzle, and a
+                                modular flow facility capable of reproducing severe cavitation regimes without rapidly
+                                degrading the polymer solutions.
+                            </p>
+                        </div>
+
+                        <!-- Technical Panel & By-The-Numbers Grid -->
+                        <div class="row gtr-150" style="align-items: stretch; margin-bottom: 2.5rem;">
+                            <div class="col-6 col-12-medium">
+                                <div class="tech-panel">
+                                    <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                    <p>
+                                        Water or polyacrylamide solutions accelerate through the converging-diverging
+                                        nozzle until local static pressure drops below vapour pressure. High-speed
+                                        images are processed into spatial vapour-ratio fields, while downstream pressure
+                                        transducers capture collapse-generated fluctuations. Image statistics,
+                                        frame-difference analysis, Fast Fourier Transforms (FFT), and continuous wavelet
+                                        transforms quantify cavity length, growth/collapse intensity, shedding
+                                        frequency, and regime transitions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-12-medium">
+                                <div class="tech-panel">
+                                    <h3><i class="fa-solid fa-chart-line"></i> The Experiment at a Glance</h3>
+                                    <ul class="tech-list">
+                                        <li><strong>2 mm nozzle throat:</strong> SLA-printed at 50 µm resolution and
+                                            optically polished.</li>
+                                        <li><strong>50–400 ppm polymer concentration:</strong> Flexible polyacrylamide
+                                            in water.</li>
+                                        <li><strong>19,000 frames/sec high-speed imaging:</strong> 17,000 images per
+                                            flow condition.</li>
+                                        <li><strong>237 ns pulsed illumination:</strong> Freezes microsecond cavity
+                                            dynamics.</li>
+                                        <li><strong>125 kHz dynamic pressure sensing:</strong> Synchronized with
+                                            high-speed video.</li>
+                                        <li><strong>30% cavitation length reduction:</strong> Achieved at 400 ppm for
+                                            $Re_{\text{th}} = 4 \times 10^4$.</li>
+                                        <li><strong>~60–65% collapse reduction:</strong> Relaxation of severe growth and
+                                            collapse fluctuations.</li>
+                                        <li><strong>~70% lower shedding frequency:</strong> Substantial attenuation of
+                                            inception shedding.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="major" />
+
+                        <h2>Mechanisms of Cavitation Reduction</h2>
+
+                        <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                            In pure water, cavitation developed through rapidly changing sheets, shedding cloud
+                            structures, and large supercavitation features. Growing cavities detached from the throat,
+                            interacted with downstream structures, and collapsed into intense cloud formations emitting
+                            shock waves. Adding polymer molecules fundamentally altered this sequence through three
+                            distinct physical mechanisms:
+                        </p>
+
+                        <ol type="1"
+                            style="font-size: 1.05rem; line-height: 1.7; color: #111; padding-left: 1.4rem; margin-bottom: 2.5rem; text-align: justify;">
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Shorter and More Stable Vapour Structures:</strong> Polymer additives attenuated
+                                downstream cavity expansion, shifting peak vapour-ratio fluctuations upstream. At a
+                                throat Reynolds number of $Re_{\text{th}} = 4 \times 10^4$, the cavitation length in the
+                                400 ppm solution was reduced by approximately 30% relative to pure water.
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Softer Growth and Collapse Dynamics:</strong> Frame-difference statistics
+                                separated cavity growth from collapse. At peak cavitation intensity, maximum collapse
+                                levels were reduced by ~52% at 200 ppm and ~62% at 400 ppm relative to water, with
+                                broader statistical relaxation reaching up to 65%.
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Slower Cavity Shedding Rhythm:</strong> FFT and wavelet spectral analysis of
+                                pressure signals showed that at cavitation inception, the dominant shedding frequency in
+                                400 ppm polymer solution was reduced by ~70% compared to pure water.
+                            </li>
+                        </ol>
+
+                        <!-- Figure Storytelling (4 Selected Figures in Two 2-Column Rows) -->
+                        <h2>Experimental Setup & Cavitation Dynamics</h2>
+
+                        <!-- Figure Row 1 -->
+                        <div class="row gtr-150" style="margin-bottom: 3rem;">
+                            <div class="col-6 col-12-medium">
+                                <div style="min-height: 110px; margin-bottom: 1rem;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Purpose-Built
+                                        Cavitation Facility</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                        Recirculating mesoscale loop integrating a positive-displacement pump, VFD
+                                        control, online Coriolis flow measurement, and synchronized high-speed optical
+                                        diagnostics.
+                                    </p>
+                                </div>
+                                <figure
+                                    style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                    <span class="image" style="margin: 0; display: block;">
+                                        <img src="cavitation/flow_setup.jpg"
+                                            alt="Recirculating mesoscale cavitation facility"
+                                            style="height: 380px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                    </span>
+                                    <figcaption
+                                        style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                        <strong>Recirculating Flow Facility.</strong> Mesoscale experimental apparatus
+                                        featuring precision flow regulation, pressure sensing, and optical windows.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-6 col-12-medium">
+                                <div style="min-height: 110px; margin-bottom: 1rem;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Modular SLA
+                                        Nozzle Assembly</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                        Stereolithography-manufactured converging-diverging insert (2 mm throat, 60°
+                                        convergence, 12° diffuser) optimized via 3.5-million-cell CFD simulations.
+                                    </p>
+                                </div>
+                                <figure
+                                    style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                    <span class="image" style="margin: 0; display: block;">
+                                        <img src="cavitation/nozzle.jpg" alt="Modular converging-diverging nozzle"
+                                            style="height: 380px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                    </span>
+                                    <figcaption
+                                        style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                        <strong>Modular SLA Nozzle.</strong> CAD rendering and SLA-printed 2 mm throat
+                                        insert providing smooth hydraulic surfaces for high-speed optical access.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Figure Row 2 -->
+                        <div class="row gtr-150" style="margin-bottom: 3rem;">
+                            <div class="col-6 col-12-medium">
+                                <div style="min-height: 110px; margin-bottom: 1rem;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Water vs.
+                                        Polymer Cavitation Response</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                        High-speed backlit images showing violent cloud cavitation in pure water versus
+                                        smoothed cavity boundaries and suppressed microbubble populations in polymer
+                                        solution.
+                                    </p>
+                                </div>
+                                <figure
+                                    style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                    <span class="image" style="margin: 0; display: block;">
+                                        <img src="cavitation/compare.jpg"
+                                            alt="High-speed comparison of water vs polymer cavitation"
+                                            style="height: 500px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                    </span>
+                                    <figcaption
+                                        style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                        <strong>High-Speed Imaging (19 kHz).</strong> Visual comparison of transient
+                                        cavity growth and collapse structures in water versus 400 ppm polyacrylamide.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-6 col-12-medium">
+                                <div style="min-height: 110px; margin-bottom: 1rem;">
+                                    <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Spatiotemporal
+                                        & Frequency Analysis</h3>
+                                    <p
+                                        style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                        Spatiotemporal vapour-ratio maps, frame-difference collapse statistics, and
+                                        continuous wavelet transforms quantifying shedding frequency attenuation.
+                                    </p>
+                                </div>
+                                <figure
+                                    style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                    <span class="image" style="margin: 0; display: block;">
+                                        <img src="cavitation/spatio.jpg" alt="Spatiotemporal and FFT frequency analysis"
+                                            style="height: 500px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                    </span>
+                                    <figcaption
+                                        style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                        <strong>Quantitative Analysis.</strong> Spatiotemporal cavity history and
+                                        dynamic pressure spectra demonstrating ~70% reduction in inception shedding
+                                        frequency.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Left-Aligned "Why the Result Matters" Section -->
+                        <h2 style="text-align: left !important; margin-left: 0;">Why the Result Matters</h2>
+                        <p
+                            style="text-align: left; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                            This study demonstrated that polymer additives do more than merely delay the first
+                            appearance of cavitation. They
+                            fundamentally reorganise the dynamics of the vapour field itself by limiting downstream
+                            cavity expansion, softening
+                            violent growth-collapse pressure surges, and slowing the characteristic shedding frequency.
+                            These insights can guide
+                            active flow-control strategies in hydrodynamic systems where cavitation causes noise,
+                            destructive vibration,
+                            material erosion, or performance degradation.
+                        </p>
+
+                        <!-- Full-Width Publication Panel -->
+                        <div class="pub-card">
+                            <h3><i class="fa-solid fa-graduation-cap"></i> Journal Publication</h3>
+                            <p style="margin-bottom: 0.5rem; font-size: 1.05rem; color: #111; text-align: left;">
+                                <strong>R. Azadi</strong> and <strong>D. S. Nobes</strong>, “Hydrodynamic cavitation
+                                reduction in semidilute
+                                turbulent polymer solution flows,” <em>Journal of Fluid Mechanics</em>, vol. 952, p.
+                                A29, 2022.
+                            </p>
+                            <p style="margin-bottom: 1rem; font-size: 0.95rem; color: #555; text-align: left;">
+                                DOI: <a href="https://doi.org/10.1017/jfm.2022.910" target="_blank"
+                                    rel="noopener">10.1017/jfm.2022.910</a> |
+                                Open Access | Includes supplementary high-speed video sequences.
+                            </p>
+                            <ul class="actions" style="margin-bottom: 0;">
+                                <li><a href="https://doi.org/10.1017/jfm.2022.910" target="_blank" rel="noopener"
+                                        class="button primary icon solid fa-external-link-alt">Read Open Access Paper on
+                                        JFM</a></li>
+                                <li><a href="publications.html" class="button icon solid fa-book">View All
+                                        Publications</a></li>
+                            </ul>
+                        </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension
+                                        Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette
+                                        System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with
+                                        Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with
+                                        Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

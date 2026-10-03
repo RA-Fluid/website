@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Shear-Thinning Polymer Flow in Short Taylor–Couette Cell | Reza Azadi, Ph.D.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .engineering-callout {
+            background: #f5f8fa;
+            border-left: 4px solid #0077b6;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .engineering-callout h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .engineering-callout p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        .status-badge {
+            background: #eef6fc;
+            border: 1px solid #bce0fd;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            color: #004b87;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-badge i {
+            font-size: 1.4rem;
+            color: #0077b6;
+            flex-shrink: 0;
+        }
+
+        .tech-panel {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .tech-panel h3 {
+            color: #111;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-panel p {
+            color: #111;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0077b6;
+            font-size: 0.9rem;
+        }
+
+        .ack-box {
+            background: #f9fbfd;
+            border: 1px solid #d0e1fd;
+            border-radius: 6px;
+            padding: 1.5rem 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ack-box h3 {
+            color: #004b87;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .ack-box p {
+            color: #111;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Reza Azadi</strong>, Ph.D.</a>
+                    <ul class="icons">
+                        <li><a href="mailto:reza.azadi@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=zppfZPIAAAAJ&hl=en" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </header>
+
+                <section>
+                    <header class="main">
+                        <h1>Shear-Thinning Polymer Flow in a Short Taylor–Couette Apparatus</h1>
+                    </header>
+
+                    <!-- Manuscript Status Callout -->
+                    <div class="status-badge">
+                        <i class="fa-solid fa-scroll"></i>
+                        <div>
+                            <strong>Manuscript Status:</strong> Manuscript in advanced preparation for submission to <em>Journal of Fluid Mechanics</em>.
+                        </div>
+                    </div>
+
+                    <!-- Main Overview Narrative -->
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        Taylor–Couette flow, generated between concentric rotating cylinders, is a canonical platform for studying hydrodynamic instability, coherent vortices, and transition to turbulence. Most classical descriptions assume long cylinders and Newtonian fluids. In this project, we examined a much more strongly confined system, with an aspect ratio of only $\Gamma = 2.65$, containing xanthan-gum solutions whose apparent viscosity decreases substantially with increasing shear rate.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        I conducted this research during my postdoctoral appointment in Professor Peichun Amy Tsai’s laboratory at the University of Alberta. Working with Junyi Yang, Lap Au-Yeung, and Professor Tsai, I developed the experimental methodology, performed the rheological and flow analysis, and created numerical tools for interpreting the strongly heterogeneous non-Newtonian flow.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        The combination of geometric confinement and shear-thinning rheology creates a particularly challenging flow. The stationary end walls produce strong secondary circulation through Ekman pumping, while the rotating inner cylinder generates a highly nonuniform shear field across the annular gap. Because the polymer solution responds differently in high- and low-shear regions, its apparent viscosity cannot be represented by a single constant value.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111;">
+                        To resolve these dynamics, we used planar particle image velocimetry (PIV) in the radial-axial plane of a purpose-built short Taylor–Couette cell. The inner cylinder was driven by a commercial rheometer, providing precise feedback control of its rotational speed. For each condition, 10,000 image pairs were acquired to obtain well-converged mean-flow and fluctuation statistics across Newtonian reference fluids and xanthan-gum solutions ranging from 200 to 2,000 ppm.
+                    </p>
+                    <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 2.5rem;">
+                        Because planar PIV directly measures only the radial and axial velocity components, I also developed a coupled numerical framework to reconstruct the dominant out-of-plane azimuthal velocity. The measured secondary-flow fields were incorporated into the axisymmetric azimuthal momentum equation, while the local Carreau viscosity was iteratively updated using the complete reconstructed rate-of-strain field.
+                    </p>
+
+                    <!-- Engineering Challenge Callout Box -->
+                    <div class="engineering-callout">
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> Engineering Challenge</h3>
+                        <p>
+                            High-resolution PIV through a curved acrylic cylinder is strongly affected by refraction, while adding shear-thinning polymers changes both the optical properties and rheology of the working fluid. I developed two refractive-index-matched fluid systems and a rectangular external viewing bath to minimise optical distortion while preserving the required non-Newtonian behaviour. This enabled quantitative imaging across the complete radial-axial section of the short Taylor–Couette cell.
+                        </p>
+                    </div>
+
+                    <!-- Technical Panel Grid -->
+                    <div class="row gtr-150" style="align-items: stretch; margin-bottom: 2.5rem;">
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-microscope"></i> Measurement Principle</h3>
+                                <p>
+                                    A rheometer-driven inner cylinder generates controlled Taylor–Couette flow within a stationary acrylic outer cylinder. A thin laser sheet illuminates tracer particles in the radial-axial plane, while double-frame imaging resolves the secondary velocity field. Ensemble and instantaneous PIV analyses quantify mean circulation, coherent vortices, Reynolds stresses, and turbulent fluctuations across Newtonian and shear-thinning working fluids.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-12-medium">
+                            <div class="tech-panel">
+                                <h3><i class="fa-solid fa-gears"></i> Key Design Features</h3>
+                                <ul class="tech-list">
+                                    <li><strong>Short Taylor–Couette geometry:</strong> Aspect ratio Γ=2.65, radius ratio η=0.72, and 6.23 mm annular gap.</li>
+                                    <li><strong>Rheometer-controlled rotation:</strong> Commercial Anton Paar rheometer provides precise feedback control.</li>
+                                    <li><strong>Optically clear cell:</strong> Black-anodised inner cylinder suppresses reflections; acrylic outer cylinder provides full optical access.</li>
+                                    <li><strong>Rectangular RIM bath & dual fluids:</strong> Custom index-matched formulations for internal fluid and outer bath.</li>
+                                    <li><strong>Controlled xanthan-gum rheology:</strong> Solutions from 200 to 2,000 ppm characterized via Carreau constitutive model.</li>
+                                    <li><strong>High-resolution PIV & large ensembles:</strong> 10,000 image pairs per condition for converged turbulence statistics.</li>
+                                    <li><strong>Azimuthal-velocity reconstruction:</strong> Coupled nonlinear solver reconstructs and local viscosity fields.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Experimental & Computational Flow Analysis</h2>
+
+                    <!-- Figure Row 1 -->
+                    <div class="row gtr-150" style="margin-bottom: 3rem;">
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 110px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Refractive-Index-Matched PIV Platform</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                    A commercial rheometer drives the black-anodised inner cylinder while dual refractive-index-matched fluids and a rectangular viewing bath eliminate curved-wall optical distortion.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="shear_thinning_PIV/RIM_box.jpg" alt="Refractive-index-matched PIV platform" style="height: 450px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                                <figcaption style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                    <strong>PIV Platform.</strong> Experimental setup of the short Taylor–Couette cell (Γ=2.65) with laser-sheet optics and external refractive-index-matching bath.
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 110px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Shear-Dependent Fluid Rheology</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                    Rheology of xanthan-gum solutions (200–2,000 ppm) demonstrate shear-thinning and viscoelastic behaviours. More concentrated solution (2000 ppm) shows a relatively longer relaxation time.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="shear_thinning_PIV/rheology.jpg" alt="Shear-dependent viscosity curves" style="height: 450px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                                <figcaption style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                    <strong> Fluid Rheology.</strong> Chnages of the storage and loss moduli of the XG solutions with angualr frequency.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Figure Row 2 -->
+                    <div class="row gtr-150" style="margin-bottom: 3rem;">
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 110px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Polymer-Dependent Coherent Flow Structure</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                    Slices of Q-criterion on the PIV-plane quantifying how shear-thinning polymer concentration reorganises Taylor vortices and secondary momentum transport.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="shear_thinning_PIV/coeherent.jpg" alt="Ensemble mean velocity fields" style="height: 450px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                                <figcaption style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                    <strong>Q-criterion Flow Fields PRojected on the PIV-Plane.</strong> Illustrating vortex reorganisation across polymer concentrations.
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-12-medium">
+                            <div style="min-height: 110px; margin-bottom: 1rem;">
+                                <h3 style="color: #111; margin-bottom: 0.5rem; font-size: 1.25rem;"> Spatial Rheological Compartmentalisation</h3>
+                                <p style="text-align: justify; font-size: 1.05rem; line-height: 1.7; color: #111; margin-bottom: 0;">
+                                    Variations of the mean Reynolds shear stress, normalised by the squared inner velocity, in the axial direction normalised by the gap size.
+                                </p>
+                            </div>
+                            <figure style="display: table; margin: 0; text-align: left; border: none; background: transparent; padding: 0;">
+                                <span class="image" style="margin: 0; display: block;">
+                                    <img src="shear_thinning_PIV/ur_uz.jpg" alt="Reconstructed viscosity fields" style="height: 450px; width: auto; max-width: 100%; object-fit: contain; border-radius: 4px; display: block; margin: 0;" />
+                                </span>
+                                <figcaption style="display: table-caption; caption-side: bottom; padding-top: 10px; font-size: 0.95rem; color: #111111; line-height: 1.5; font-weight: 500; text-align: left;">
+                                    <strong>Reynolds Shear Stress Axial Distribution.</strong> Asymmetric distribution and different peak values and shift for different concentrations.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Research Team & Acknowledgements -->
+                    <div class="ack-box">
+                        <h3><i class="fa-solid fa-users"></i> Research Team & Institutional Acknowledgements</h3>
+                        <p>
+                            <strong>Research Team:</strong> Reza Azadi, Junyi Yang, Lap Au-Yeung, and Professor Peichun Amy Tsai<br>
+                            <strong>Institution:</strong> Department of Mechanical Engineering, University of Alberta, Edmonton, Canada<br>
+                            <strong>My Contribution:</strong> Experimental methodology development, refractive-index matching, rheological characterisation, PIV processing, numerical reconstruction solver development, physical interpretation, and manuscript drafting.
+                        </p>
+                    </div>
+
+                    <hr class="major" />
+
+                    <h2>Publications & Related Research</h2>
+
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: #3d4449;">
+                        <strong>Research findings from this project contribute to ongoing investigations on non-Newtonian fluid mechanics, turbulent drag reduction, and complex interfacial flow phenomena.</strong>
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="publications.html" class="button primary icon solid fa-book">View Publications</a></li>
+                        <li><a href="https://github.com/ra-fluid" target="_blank" class="button icon brands fa-github">View GitHub Solvers & Repos</a></li>
+                    </ul>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar">
+            <div class="inner">
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="index.html">Homepage</a>
+                        </li>
+                        <li>
+                            <span class="opener">Research Projects</span>
+                            <ul>
+                                <li>
+                                    <a href="droplet_dynamics.html">Droplet Dynamics & Interfacial Gas Layers</a>
+                                </li>
+
+                                <li>
+                                    <a href="rise_control.html">Precise Control of Rising Microdroplets</a>
+                                </li>
+                                <li>
+                                    <a href="textured_surfaces.html">Functional Nano-Wrinkled Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="optical_imaging.html">Optical Imaging of Lubricant Dynamics</a>
+                                </li>
+                                <li>
+                                    <a href="LIS_simulation.html">AFM-Resolved Two-Phase Flow Simulations</a>
+                                </li>
+                                <li>
+                                    <a href="inverse_pendant_drop.html">Custom Inverted-Drop Interfacial-Tension Cell</a>
+                                </li>
+                                <li>
+                                    <a href="microplastics.html">Microbubble-Assisted Microplastic Capture</a>
+                                </li>
+                                <li>
+                                    <a href="VOIS.html">Viscoelastic Oil-Infused Surfaces</a>
+                                </li>
+                                <li>
+                                    <a href="shear_thinning_PIV.html">Shear-Thinning Flow in a Confined Taylor–Couette System</a>
+                                </li>
+                                <li>
+                                    <a href="scanning_PIV.html">Automated Scanning PIV Platform</a>
+                                </li>
+                                <li>
+                                    <a href="hydrodynamic_cavitation_ploymer.html">Taming Hydrodynamic Cavitation with Polymers</a>
+                                </li>
+                                <li>
+                                    <a href="turbulent_shearThin_PG.html">Turbulent Shear-Thinning Flow with Pressure-Gradient</a>
+                                </li>
+                                <li>
+                                    <a href="tessellation_PTV.html">Resolving Flow at Moving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="mesoscale_bubble_CFD.html">Hidden Flow Around Confined Slug Bubbles</a>
+                                </li>
+                                <li>
+                                    <a href="VOSET.html">VOSET: Capturing Evolving Interfaces</a>
+                                </li>
+                                <li>
+                                    <a href="vertical_air_water_flow_patterns.html">Mapping Vertical Two-Phase Flow</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="teaching.html">Teaching</a>
+                        </li>
+                        <li>
+                            <a href="publications.html">Publications</a>
+                        </li>
+                        <li>
+                            <a href="cv.html">Curriculum Vitae</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ra-fluid" target="_blank">Codes & Repos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>I am currently based at the University of Sydney. Please feel free to reach out regarding
+                        collaborations, research inquiries, or access to CAD designs, experimental data and
+                        computational solvers.</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a
+                                href="mailto:reza.azadi@sydney.edu.au">reza.azadi@sydney.edu.au</a></li>
+                        <li class="icon solid fa-building">Soft Matter and Interfaces Lab<br />
+                            School of Chemistry<br />
+                            The University of Sydney, NSW</li>
+                    </ul>
+                </section>
+
+                <footer id="footer">
+                    <p class="copyright">&copy; 2026 Reza Azadi. All rights reserved. Design: <a
+                            href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
